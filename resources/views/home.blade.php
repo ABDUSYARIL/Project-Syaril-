@@ -1,80 +1,54 @@
 @extends('layouts.app')
 
+@section('title', 'Home - Abdu Syaril')
+
 @section('content')
-   
-<style>
-   .hero-title {
-    font-size: 40px;
-    font-weight: bold;
-    color: #3f6f54;
-}
 
-.hero-subtitle {
-    font-size: 18px;
-    color: #5f7f6f;
-}
-
-.info-card {
-    background: rgba(255,255,255,0.7);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    padding: 20px;
-    margin-top: 20px;
-    text-align: center;
-    transition: 0.3s;
-}
-
-.info-card:hover {
-    transform: translateY(-10px);
-}
-</style>
-
-<div class="text-center mt-5" data-aos="fade-up">
-
-    <!-- HERO -->
-    <h1 class="hero-title">
-        🌿 Selamat Datang
+<!-- HERO -->
+<div class="text-center py-16 px-6">
+    <h1 class="text-4xl md:text-5xl font-bold text-green-600 mb-4">
+        🌿 Selamat Datang di Donasiku
     </h1>
 
-    <p class="hero-subtitle">
-        Di Website Abdu Syaril ✨
+    <p class="text-lg text-gray-600 max-w-xl mx-auto mb-8">
+        Mari bersama membantu sesama dan membuat perubahan kecil menjadi berarti.
     </p>
 
-    <!-- BUTTON -->
-    <div class="mt-4">
-        <a href="{{ route('profil') }}" class="btn btn-success btn-lg me-2">
-            🌿 Lihat Profil
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="{{ route('profil') }}" 
+           class="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
+            Lihat Profil
         </a>
 
-        <a href="{{ route('kontak') }}" class="btn btn-outline-success btn-lg">
-            ✉️ Kontak
+        <a href="{{ route('kontak') }}" 
+           class="px-6 py-3 border border-green-600 text-green-600 rounded-lg hover:bg-green-50 transition">
+            Kontak
         </a>
     </div>
-
 </div>
 
-<!-- SECTION INFO -->
-<div class="row mt-5">
+<!-- FITUR / INFO -->
+<div class="max-w-5xl mx-auto px-6 pb-16 grid md:grid-cols-3 gap-6">
 
-    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="info-card">
-            <h5>💻 Web Developer</h5>
-            <p>Membangun website dengan tampilan modern dan nyaman.</p>
-        </div>
+    <div class="bg-white shadow rounded-xl p-6 text-center">
+        <h3 class="text-lg font-semibold text-green-600 mb-2">💚 Donasi</h3>
+        <p class="text-gray-500 text-sm">
+            Salurkan bantuan dengan mudah dan cepat.
+        </p>
     </div>
 
-    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="info-card">
-            <h5>🐍 Python</h5>
-            <p>Mengembangkan aplikasi interaktif dan logika program.</p>
-        </div>
+    <div class="bg-white shadow rounded-xl p-6 text-center">
+        <h3 class="text-lg font-semibold text-green-600 mb-2">🌍 Dampak</h3>
+        <p class="text-gray-500 text-sm">
+            Setiap donasi memberikan perubahan nyata.
+        </p>
     </div>
 
-    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-        <div class="info-card">
-            <h5>🌱 Belajar & Berkembang</h5>
-            <p>Selalu belajar hal baru untuk menjadi lebih baik.</p>
-        </div>
+    <div class="bg-white shadow rounded-xl p-6 text-center">
+        <h3 class="text-lg font-semibold text-green-600 mb-2">🤝 Transparan</h3>
+        <p class="text-gray-500 text-sm">
+            Semua donasi tercatat dan dapat dipantau.
+        </p>
     </div>
 
 </div>
