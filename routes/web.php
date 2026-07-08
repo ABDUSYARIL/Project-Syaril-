@@ -5,7 +5,9 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\KontakController;
 use App\Http\Controllers\CampaignController;
+use App\Http\Controllers\DocumentationFileController;
 use App\Http\Controllers\DonationController;
+use App\Http\Controllers\FeedController;
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/home', [HomeController::class, 'index'])->name('home');
@@ -34,3 +36,8 @@ Route::get('/donations/create', [DonationController::class, 'create'])
 
 Route::post('/donations', [DonationController::class, 'store'])
         ->name('donations.store');
+
+Route::get('/documentations', [DocumentationFileController::class, 'index']);
+Route::post('/documentations', [DocumentationFileController::class, 'store']);
+
+route::get('/feeds', [FeedController::class, 'index'])->name('feeds.index');
